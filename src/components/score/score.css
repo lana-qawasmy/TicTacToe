@@ -1,0 +1,11 @@
+.score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 615px;
+    border: 2px solid rgb(249, 139, 139);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
