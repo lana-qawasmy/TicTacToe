@@ -1,29 +1,22 @@
-import React, { useState } from 'react';
 import './board.css'
 
-/**
- * 
- * @param {
- *      onWinning(value: string) => string;
- * } props 
- */
+
 const Board = (props) => {
 
-    const [cells, setCells] = useState(Array(9).fill(""));
+
 
     const handleClick = (index) => {
-        if (cells[index] !== '')
+        if (props.cells[index] !== '')
             return;
 
-        const arr = [...cells];
+        const arr = [...props.cells];
         arr[index] = props.turn;
         props.setTurn(props.turn);
-        setCells(arr);
+        props.setCells(arr);
         let winner = checkWinner(arr);
-        if(winner !== '')
-        {
+        if (winner !== '') {
             props.onWinning(winner);
-            setCells(Array(9).fill(''));
+            props.setCells(Array(9).fill(''));
         }
     }
 
@@ -75,7 +68,7 @@ const Board = (props) => {
 
         // Check the Draw
         let a = arr.filter((item) => item === '');
-        if(a.length)
+        if (a.length)
             return '';
         else
             return 'Draw';
@@ -84,7 +77,7 @@ const Board = (props) => {
     return (
         <div className='board'>
             {
-                cells.map((element, index) =>
+                props.cells.map((element, index) =>
                     <div className={`cell ${element}`} key={index} onClick={() => handleClick(index)}>
                         {element}
                     </div>

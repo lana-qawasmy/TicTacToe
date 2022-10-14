@@ -1,0 +1,39 @@
+.showWinner {
+      z-index: 2px;
+      background-color: #fff7248f;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+}
+
+.showWinner>span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 400px;
+      font-size: 50px;
+      font-family: system-ui;
+      font-weight: 500;
+      font-style: oblique;
+      text-shadow: 2px 2px 10px #ff1e1e;
+}
+
+.showWinner>button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 180px;
+      border: 1px solid;
+      border-radius: 10px;
+      font-size: 20px;
+      font-family: emoji;
+      font-weight: 500;
+      background-color: #fe6464c4;
+      cursor: pointer;
+}
