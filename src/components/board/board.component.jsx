@@ -17,12 +17,14 @@ const Board = (props) => {
 
         const arr = [...cells];
         arr[index] = props.turn;
-        console.log(props.turn);
         props.setTurn(props.turn);
         setCells(arr);
         let winner = checkWinner(arr);
         if(winner !== '')
+        {
             props.onWinning(winner);
+            setCells(Array(9).fill(''));
+        }
     }
 
     const checkWinner = (arr) => {

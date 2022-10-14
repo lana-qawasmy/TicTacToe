@@ -10,11 +10,11 @@ function App() {
   const [X, setX] = useState(0);
   const [winner, setWinner] = useState('');
 
-  const oWins = () => {
-    setO((o) => { return o + 1 });
+  const oWins = (o) => {
+    setO((o) => { return (o + 1) });
   }
-  const xWins = () => {
-    setX((x) => { return x + 1 });
+  const xWins = (x) => {
+    setX((x) => { return (x + 1) });
   }
   const changeTurn = (t) => {
     setTurn(t === 'X' ? 'O' : 'X');
@@ -22,17 +22,25 @@ function App() {
 
   const onWin = (win) => {
     setWinner(win);
+    changeTurn(win);
+    if (win === 'X')
+      xWins(X);
+    if (win === 'O')
+      oWins(O);
   }
   return (
     <div className="App">
-      <Score 
-        turn = {turn}
+      <Score
+        turn={turn}
+        X={X}
+        O={O}
       />
       <Board
         turn={turn}
-        setTurn = {changeTurn}
+        setTurn={changeTurn}
         onWinning={onWin}
       />
+
     </div>
   );
 }
