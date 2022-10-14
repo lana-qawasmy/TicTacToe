@@ -1,11 +1,17 @@
 .score{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 50px;
     width: 615px;
     border: 2px solid rgb(249, 139, 139);
     margin-top: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
+    font-size: 24px;
+    font-family: system-ui;
+    font-weight: 700;
+    font-style: oblique;
+    text-shadow: 1px 1px 10px black;
+    color: darkblue;
 }

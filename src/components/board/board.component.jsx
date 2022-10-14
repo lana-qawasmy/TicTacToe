@@ -10,17 +10,16 @@ import './board.css'
 const Board = (props) => {
 
     const [cells, setCells] = useState(Array(9).fill(""));
-    const [turn, setTurn] = useState('X');
 
     const handleClick = (index) => {
-        if (cells[index] !== "")
+        if (cells[index] !== '')
             return;
 
         const arr = [...cells];
-        arr[index] = turn;
-        setTurn(turn === 'X' ? 'O' : 'X');
+        arr[index] = props.turn;
+        console.log(props.turn);
+        props.setTurn(props.turn);
         setCells(arr);
-
         let winner = checkWinner(arr);
         if(winner !== '')
             props.onWinning(winner);
