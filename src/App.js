@@ -6,13 +6,13 @@ import Score from './components/score/score.component';
 function App() {
   const [winner, setWinner] = useState('');
   const onWin = (win) => {
-    setWinner = win;
+    setWinner(win);
   }
   return (
     <div className="App">
       <Score />
       <Board
-        onWin = {onWin(winner)}
+        onWinning = {onWin}
       />
     </div>
   );

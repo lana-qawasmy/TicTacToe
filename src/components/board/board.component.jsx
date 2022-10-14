@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import './board.css'
 
+/**
+ * 
+ * @param {
+ *      onWinning(value: string) => string;
+ * } props 
+ */
 const Board = (props) => {
 
     const [cells, setCells] = useState(Array(9).fill(""));
@@ -17,7 +23,7 @@ const Board = (props) => {
 
         let winner = checkWinner(arr);
         if(winner !== '')
-            props.onWin(winner);
+            props.onWinning(winner);
     }
 
     const checkWinner = (arr) => {
