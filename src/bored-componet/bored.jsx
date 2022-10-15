@@ -5,12 +5,32 @@ import "./bored.css"
 const Bored = () => {
 
     const [cell, Setcell] = useState(Array(9).fill(""));
-    const [wins, Setwins] = useState({ x: 0, o: 0 })
+
     const [turn, Setturn] = useState("X");
+    const [addo, Setaddo] = useState(0);
+    const [addx, Setaddx] = useState(0);
     const [inc, Setinc] = useState(0);
     const [winer, Setwin] = useState("");
-    console.log(winer);
 
+
+    const handleClick = () => {
+        const res = Array(9).fill("")
+        console.log(res)
+        Setcell(res);
+        Setturn("X")
+        Setwin("")
+
+
+    }
+    const Add = () => {
+        if (winer === "O")
+       Setaddo(addo + 1)
+        if (winer === "X")
+            Setaddx(addo+1)
+            console.log(addx);
+    }
+
+    console.log(winer);
     const Setval = (index) => {
         const cellarray = [...cell];
         cellarray[index] = turn;
@@ -36,9 +56,9 @@ const Bored = () => {
 
 
 
-       
-    }
 
+    }
+    console.log(addo)
     const win = (xo) => {
         Setinc(inc + 1);
 
@@ -65,32 +85,27 @@ const Bored = () => {
 
     }
 
-    const Setwins1 = () => {
-        if (winer === "X")
-       return wins.x + 1
-        if (winer === "O")
-            return wins.o + 1
-    }
     
 
     return (
         <div>
             <div className="flex">
                 <span >Turn:{turn}</span>
-                <span >Wins of X : {winer==="X"? Setwins1():""}</span>
-                <span >Wins of O : {winer==="O"? Setwins1():""}</span>
+                <span >Wins of X : {addx} </span>
+                <span >Wins of O :{addo} </span>
+
             </div>
             <div className="wrap">{
                 cell.map((val, index) => {
 
-                    return <div className={`div1 ${val === "X" ? "o" : "x"} hov`} key={index} onClick={() => Setval(index) + Setwins1()} >{val}</div>
+                    return <div className={`div1 ${val === "X" ? "o" : "x"} hov`} key={index} onClick={() => Setval(index) && {Add}}  >{val}</div>
 
 
                 })}
 
                 <div className={`  ${winer === "X" ? "XCSS" : ""} ${winer === "O" ? "OCSS" : ""} ${winer === "DRwa" ? "DCSS" : ""}`}>
 
-                    {winer !== "" ? <span className="winner"> {winer !== "DRwa" ? "The winner is " + winer : "its DRwa"} <br /> <button className="reset">Reset</button></span> : ""}
+                    {winer !== "" ? <span className="winner"> {winer !== "DRwa" ? "The winner is " + winer : "its DRwa"} <br /> <button className={`reset `} onClick={handleClick}>Reset</button></span> : ""}
 
                 </div>
             </div>
