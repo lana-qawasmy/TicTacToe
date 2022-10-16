@@ -19,18 +19,13 @@ const Bored = () => {
         Setcell(res);
         Setturn("X")
         Setwin("")
+        Setinc(0);
 
 
     }
-    const Add = () => {
-        if (winer === "O")
-       Setaddo(addo + 1)
-        if (winer === "X")
-            Setaddx(addo+1)
-            console.log(addx);
-    }
+    
 
-    console.log(winer);
+
     const Setval = (index) => {
         const cellarray = [...cell];
         cellarray[index] = turn;
@@ -54,8 +49,13 @@ const Bored = () => {
         const result = win(cellarray);
         Setwin(result);
 
-
-
+       
+            if (result === "O")
+           Setaddo(addo + 1)
+            if (result === "X")
+                Setaddx(addo+1)
+                console.log(addx);
+        
 
     }
     console.log(addo)
@@ -92,13 +92,13 @@ const Bored = () => {
             <div className="flex">
                 <span >Turn:{turn}</span>
                 <span >Wins of X : {addx} </span>
-                <span >Wins of O :{addo} </span>
+                <span >Wins of O : {addo} </span>
 
             </div>
             <div className="wrap">{
                 cell.map((val, index) => {
 
-                    return <div className={`div1 ${val === "X" ? "o" : "x"} hov`} key={index} onClick={() => Setval(index) && {Add}}  >{val}</div>
+                    return <div className={`div1 ${val === "X" ? "o" : "x"} hov`} key={index} onClick={() => Setval(index) }  >{val}</div>
 
 
                 })}
