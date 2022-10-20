@@ -1,0 +1,8 @@
+.board {
+  /* background-color: #fff; */
+  max-width: 480px;
+  max-height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} 
