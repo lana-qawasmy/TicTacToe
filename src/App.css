@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 1rem;
 }
 
 .App-logo {
@@ -32,7 +33,22 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.reset-button {
+  padding: 8px 18px;
+  background-color: #1878f1;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.reset-button:hover{
+  cursor: pointer;
+  background-color: #187af1e1;
+  color: rgb(255, 255, 255);
 }

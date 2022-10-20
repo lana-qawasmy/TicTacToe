@@ -1,0 +1,22 @@
+
+.result-box{
+    margin: auto;
+    width: 17.5em;
+    height: 2.5em;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0 1em;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.xScore{
+    color: tomato;
+}
+
+.oScore{
+    color: #1878f1;
+}
