@@ -14,33 +14,33 @@ const Board = (props) => {
     //         console.log ('content' , content) ;
     //     }
     // }
-    const [winner , setWinner] = useState ('none') ;
+    // const [winner , setWinner] = useState ('none') ;
     const evaluate = () => {
         
         if (content[0] === content[1] && content[0] === content[2] && content[0] !== '')
-            {setWinner (content[0]) ;}
+            {return (content[0]) ;}
         if (content[3] === content[4] && content[3] === content[5] && content[3] !== '')
-            {setWinner (content[3]) ;}
+            {return (content[3]) ;}
         if (content[6] === content[7] && content[6] === content[8] && content[6] !== '')
-            {setWinner (content[6]) ;}
+            {return (content[6]) ;}
         if (content[0] === content[3] && content[0] === content[6] && content[0] !== '')
-            {setWinner (content[0]) ;}
+            {return (content[0]) ;}
         if (content[1] === content[4] && content[1] === content[7] && content[1] !== '')
-            {setWinner (content[1]) ;}
+            {return (content[1]) ;}
         if (content[2] === content[5] && content[2] === content[8] && content[2] !== '')
-            {setWinner (content[3]) ;}
+            {return (content[2]) ;}
         if (content[0] === content[4] && content[0] === content[8] && content[0] !== '')
-            {setWinner (content[0]) ;}
+            {return (content[0]) ;}
         if (content[2] === content[4] && content[2] === content[6] && content[2] !== '')
-            {setWinner (content[2]) ;}
-        const thereIsEmptyCells = false ;
+            {return (content[2]) ;}
+        let thereIsEmptyCells = false ;
         content.forEach(element => {
             if (element === '')
                 thereIsEmptyCells = true ;
         });
-        setWinner (thereIsEmptyCells ? '' : 'draw') ;
-        console.log ('current winner' , winner) ;
-        return winner ;
+        return (thereIsEmptyCells ? '' : 'draw') ;
+        // console.log ('current winner' , winner) ;
+        // return winner ;
     } 
     
   return (
@@ -63,7 +63,7 @@ const Board = (props) => {
                         props.onChange (props.turn === 'X' ? 'O' : 'X') ;
                         setContent (newContent) ;
                         console.log ('content' , content) ;
-                        props.onWin (() => evaluate) ;
+                        props.onWin (evaluate) ;
                     }
                     // console.log ('current winner' , winner) ;
                 } }
