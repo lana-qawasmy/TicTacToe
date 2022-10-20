@@ -16,21 +16,21 @@ body {
   justify-content: space-between;
 }
 
-.App>.board>.card {
+/* .App>.board>.card {
   background-color: #78bfc5;
   width: 150px;
   height: 150px;
   margin: 5px;
   border-radius: 10px;
-  
+
   cursor: pointer;
   color: white;
   font-size: 130px;
   text-align: center;
   line-height: 130px;
-  
-  transition-duration:  0.3s;
-}
+
+  transition-duration: 0.3s;
+} */
 
 .App>.board>.card:hover {
   box-shadow: -1px 1px 8px #474646;
@@ -42,6 +42,6 @@ body {
   background-color: #ebaf4f;
 }
 
-.App>.board>.card.X{
+.App>.board>.card.X {
   background-color: #dc6859;
 }

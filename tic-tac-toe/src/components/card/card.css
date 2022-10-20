@@ -1,0 +1,28 @@
+.card {
+  background-color: #78bfc5;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  color: white;
+  font-size: 130px;
+  text-align: center;
+  line-height: 130px;
+
+  transition-duration: 0.3s;
+}
+
+.card:hover {
+  box-shadow: -1px 1px 8px #474646;
+  transition-duration: 200ms;
+}
+
+.card.O {
+  background-color: #ebaf4f;
+}
+
+.card.X {
+  background-color: #dc6859;
+}
