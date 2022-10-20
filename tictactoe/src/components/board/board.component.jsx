@@ -14,7 +14,9 @@ const Board = (props) => {
     //         console.log ('content' , content) ;
     //     }
     // }
-    // const [winner , setWinner] = useState ('none') ;
+
+    const [winner , setWinner] = useState ('') ;
+    useEffect (() => evaluate , [content]) ;
     const evaluate = () => {
         
         if (content[0] === content[1] && content[0] === content[2] && content[0] !== '')
@@ -39,16 +41,23 @@ const Board = (props) => {
                 thereIsEmptyCells = true ;
         });
         return (thereIsEmptyCells ? '' : 'draw') ;
-        // console.log ('current winner' , winner) ;
-        // return winner ;
     } 
+
+    // const clear = () => {
+    //     let tempContent = [...content] ;
+    //     tempContent.forEach((element , index) => {
+    //         tempContent[index] = '' ;
+    //     });
+    //     console.log ('temp' , tempContent) ;
+    //     setContent (tempContent) ;
+    // }
     
   return (
     <div>
         <div className="infoBoard">
-            <span>X wins : {props.winner.xWin}</span>
+            <span>X wins : {props.score.xWin}</span>
             <span>| </span>
-            <span>O wins : {props.winner.oWin}</span>
+            <span>O wins : {props.score.oWin}</span>
             <span>| </span>
             <span>Turn : {props.turn}</span>
         </div>
@@ -62,16 +71,20 @@ const Board = (props) => {
                         newContent[index] = props.turn;
                         props.onChange (props.turn === 'X' ? 'O' : 'X') ;
                         setContent (newContent) ;
-                        console.log ('content' , content) ;
-                        props.onWin (evaluate) ;
+                        // props.onWin (() => evaluate) ;
                     }
-                    // console.log ('current winner' , winner) ;
+                    const currentWinner = evaluate() ;
+                    if (currentWinner != '') {
+                        //const clearBoard = clear() ;
+                        props.onWin (currentWinner , content) ;
+                        console.log (content) ;
+                    }
+                    console.log ('current winner' , currentWinner) ;
                 } }
                 className = {item == '' ? '' : 'filled'} 
                 >{item} </button>
                 )
             }
-            {evaluate}
         </div>
     </div>
   )

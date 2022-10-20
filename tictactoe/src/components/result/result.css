@@ -1,0 +1,44 @@
+.result {
+    width: 500px ;
+    height: 300px ;
+    margin-top: 150px;
+    background-color: rgba(245, 101, 173, 0.452);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 30px;
+    flex-wrap: wrap;
+    font-weight: 900;
+    box-shadow: 2px 2px 5px 1px rgb(126, 69, 108);
+    outline: none;
+    color: #fff;
+    border: 0px;
+}
+
+.result button {
+    width: 150px ;
+    height: 50px ;
+    background-color: rgb(245, 101, 173);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 1px rgb(126, 69, 108);
+    outline: none;
+    font-size: 30px;
+    font-weight: 900;
+    outline: none;
+    color: #fff;
+    border: 0px;
+}
+.result .winnerBox {
+    width: 400px;
+}
+
+.result button:hover {
+    position: relative;
+    bottom: 1px ; 
+    left: -1px ;
+    box-shadow: 4px 4px 3px 2px rgb(126, 69, 108);
+}
