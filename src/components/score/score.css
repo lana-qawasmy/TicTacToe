@@ -13,4 +13,5 @@
     font-style: oblique;
     text-shadow: 1px 1px 10px black;
     color: darkblue;
+    user-select: none;
 }
