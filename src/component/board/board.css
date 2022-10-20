@@ -1,0 +1,72 @@
+.game {
+    display: flex;
+    width: 500px;
+    height: 700px;
+    justify-content: center;
+    align-content: center;
+}
+
+.board {
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1c5f0b;
+}
+
+.row {
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    display: inline-block;
+    width: 32%;
+    font-size: 20px;
+    /* border: 1px solid #61a845; */
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+    background-color: #9fb68a;
+    color: #164909;
+}
+
+button {
+    width: 99%;
+    height: 35px;
+    background-color: #9fb68a;
+    border-radius: 5px;
+    border: 0px;
+    margin-top: 4px;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: larger;
+    color: #164909;
+}
+
+button:hover,
+button:focus {
+    background-color: #9fb68a;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #1c5f0b;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateZ(2px)
+}
+
+.header{
+    display: flex;
+    width: 444px;
+    justify-content: space-between;
+    padding: 2px;
+    margin-bottom: 4px;
+}
