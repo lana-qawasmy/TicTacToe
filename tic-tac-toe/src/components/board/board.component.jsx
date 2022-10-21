@@ -74,6 +74,18 @@ const Board = (props) => {
       setGameOver(true);
   };
 
+  const restartGame = () => {
+    props.setWins({ xWins: 0, oWins: 0 });
+    continueGame();
+  };
+
+  const continueGame = () => {
+    setBoardVals(Array(9).fill("n"));
+    setMoves({ xMoves: [], oMoves: [] });
+    setGameOver(false);
+    setWin(false);
+    props.setTurn('X');
+  };
   return (
     <div className='board'>
       {
@@ -88,7 +100,12 @@ const Board = (props) => {
           );
         })
       }
-      <Popup alert={gameOver ? 'alert' : ''} draw={!win} winner={props.turn === 'X' ? 'O' : 'X'} />
+      <Popup
+        alert={gameOver ? 'alert' : ''}
+        draw={!win}
+        winner={props.turn === 'X' ? 'O' : 'X'}
+        restartGame={restartGame}
+        continueGame={continueGame} />
     </div>
   );
 };
