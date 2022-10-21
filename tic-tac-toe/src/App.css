@@ -3,8 +3,28 @@ body {
   /* color: white; */
   display: flex;
   justify-content: space-around;
-  margin-top: 220px;
+  margin-top: 150px;
   overflow: hidden;
+}
+
+.App>.turn {
+  font-weight: 500;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+
+}
+
+.App>.turn.X {
+  background-color: #dc6859;
+}
+.App>.turn.O {
+  background-color: #ebaf4f;
 }
 
 .App>.results {
