@@ -1,0 +1,56 @@
+.bord {
+  background-color: rgb(88, 88, 87);
+  display: flex;
+  max-width: 350px;
+  min-height: 234px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.cells {
+    border: 1px  solid #e6e0e0;
+      width: 114px;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      font-size: 50px;
+      font-weight: 800;
+      align-items: center;
+}
+.bord>.cells.X{
+  color: red;
+}
+.bord>.cells.O {
+  color: greenyellow;
+}
+.bord .result {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #9abbb0;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bord .result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bord .result p {
+  margin: 0;
+  margin-right: 10px;
+}
+.result>.restart{
+background-color: #010808;
+  margin-left: inherit;
+  width: 65px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}

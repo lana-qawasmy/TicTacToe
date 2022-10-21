@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header{
+  display: inline-flex;
+  width: 345px;
+  border: 1px solid;
+  justify-content: space-around;
+
+}
