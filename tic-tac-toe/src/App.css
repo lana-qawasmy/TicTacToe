@@ -6,3 +6,26 @@ body {
   margin-top: 220px;
   overflow: hidden;
 }
+
+.App>.results {
+  border: 1px solid #aeaeae;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
+}
+
+.App>.results>.X {
+  background-color: #dc6859;
+  color: white;
+  padding: 0 10px;
+}
+
+.App>.results>.O {
+  background-color: #ebaf4f;
+  color: white;
+  padding: 0 10px;
+}
