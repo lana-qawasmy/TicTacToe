@@ -26,3 +26,7 @@
 .card.X {
   background-color: #dc6859;
 }
+
+.card.blank:hover::before {
+  content : attr(placeholder);
+}
