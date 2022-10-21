@@ -5,6 +5,7 @@ body {
   justify-content: space-around;
   margin-top: 150px;
   overflow: hidden;
+  user-select: none;
 }
 
 .App>.turn {
