@@ -88,6 +88,7 @@ const Board = (props) => {
   };
   return (
     <div className='board'>
+      <button onClick={continueGame} className='restart'>↻</button>
       {
         boardVals.map((item, index) => {
           return (

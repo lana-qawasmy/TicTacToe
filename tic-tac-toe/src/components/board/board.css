@@ -6,4 +6,31 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
-} 
+}
+
+.board>.restart {
+  position: fixed;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  top: 145px;
+  left: 387.6px;
+  line-height: 47px;
+  margin: 15px 5px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #78bfc5;
+  transition: color .20s ease-in-out, background-color .20s ease-in-out, border-color .20s ease-in-out, box-shadow .20s ease-in-out;
+}
+
+
+.board>.restart:hover {
+  color: #212529;
+  background-color: #dee5ec;
+  border-color: #dae0e5;
+}
