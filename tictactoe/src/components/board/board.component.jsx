@@ -53,7 +53,7 @@ const Board = (props) => {
     // }
     
   return (
-    <div>
+    <div className='wrapper'>
         <div className="infoBoard">
             <span>X wins : {props.score.xWin}</span>
             <span>| </span>

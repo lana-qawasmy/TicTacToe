@@ -1,3 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .boardContent {
     margin: 20px;
     background-color: rgb(69, 29, 56);
