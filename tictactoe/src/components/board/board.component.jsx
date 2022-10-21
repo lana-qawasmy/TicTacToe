@@ -4,19 +4,25 @@ import { useState } from 'react'
 import './board.css' ;
 
 const Board = (props) => {
-    const [content , setContent] = useState (Array(9).fill('')) ;
-    // const flip = (index) => {
-    //     if (content[index] === '') {
-    //         const newContent = [...content] ;
-    //         newContent[index] = props.turn;
-    //         props.onChange (props.turn === 'X' ? 'O' : 'X') ;
-    //         setContent (newContent) ;
-    //         console.log ('content' , content) ;
-    //     }
-    // }
+    const content = props.cells ;
+    const flip = (index) => {
+    if (content [index] === '') {
+        content[index] = props.turn;
+        props.onChange (props.turn === 'X' ? 'O' : 'X') ;
+        props.onCellsChange (content) ;
+        console.log (content) ;
+        const currentWinner = evaluate() ;
+        if (currentWinner != '') {
+            //const clearBoard = clear() ;
+            props.onWin (currentWinner , content) ;
+            console.log (content) ;
+        }
+        console.log ('current winner' , currentWinner) ;
+    }
+    }
 
     const [winner , setWinner] = useState ('') ;
-    useEffect (() => evaluate , [content]) ;
+    //useEffect (() => evaluate , [content]) ;
     const evaluate = () => {
         
         if (content[0] === content[1] && content[0] === content[2] && content[0] !== '')
@@ -64,23 +70,7 @@ const Board = (props) => {
         <div className="boardContent">
             {
                 content.map ((item , index) => 
-                <button key={index} onClick = {()=> {
-
-                    if (item === '') {
-                        const newContent = [...content] ;
-                        newContent[index] = props.turn;
-                        props.onChange (props.turn === 'X' ? 'O' : 'X') ;
-                        setContent (newContent) ;
-                        // props.onWin (() => evaluate) ;
-                    }
-                    const currentWinner = evaluate() ;
-                    if (currentWinner != '') {
-                        //const clearBoard = clear() ;
-                        props.onWin (currentWinner , content) ;
-                        console.log (content) ;
-                    }
-                    console.log ('current winner' , currentWinner) ;
-                } }
+                <button key={index} onClick = {()=> flip (index)}
                 className = {item == '' ? '' : 'filled'} 
                 >{item} </button>
                 )

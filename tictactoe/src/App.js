@@ -26,13 +26,15 @@ function App() {
     setCells (newCells) ;
     // console.log('winner', temp);
   }
+
+  const cellsChange = (newCells) => setCells (newCells)
   
 
   return (
     <div className="App">
       {winner !== '' 
       ? <Result cells = {cells} winner = {winner} onWin={addWin}/> 
-      : <Board turn={turn} score={score} onWin={addWin} onChange={flipTurn} cells = {cells} />}
+      : <Board turn={turn} score={score} onWin={addWin} onChange={flipTurn} cells = {cells} onCellsChange = {cellsChange} />}
     </div>
   );
 }
