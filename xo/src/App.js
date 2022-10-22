@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { ScoreBoard } from "./components/pop-out/popout.component.jsx";
+import { ScoreBoard } from "./components/scoreboard/scoreboard.component.jsx";
 import { Reset } from "./components/common/reset.component.jsx";
 import { Board } from "./components/board/board.component.jsx";
 import './App.css';
+
 const App = () => {
 
 
@@ -65,7 +66,7 @@ const App = () => {
     }
   }
 
-  
+
   const resetBoard = () => {
     setGameOver(false);
     setBoard(Array(9).fill(null));
