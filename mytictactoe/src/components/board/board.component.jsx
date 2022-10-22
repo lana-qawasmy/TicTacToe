@@ -8,7 +8,7 @@ const Board =({board,onClick})=>{
         <div className="board">
             { 
           board.map((value,indx)=>{
-                return <CardBox  key={value+indx} value ={value} onClick={()=> value===null && onClick(indx)} />
+                return <CardBox  key={value+indx} value ={value} onClick={()=> value === null && onClick(indx)} />
 
             }
                 )

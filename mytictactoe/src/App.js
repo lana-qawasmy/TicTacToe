@@ -15,10 +15,11 @@ function App() {
     [0, 4, 8],
     [2, 4, 6]
   ]
-  const [board, setBoard] = useState(Array(9).fill(null))
   const [turn, setTurn] = useState(true);
-  const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
-  const [gameOver, setGameOver] = useState(true);
+  const [board, setBoard] = useState(Array(9).fill(null))
+
+  const [scores, setScores] = useState({  oScore: 0,xScore:0 });
+  const [gameOver, setGameOver] = useState(false);
 
   const card = (cardId) => {
     const updateCard = board.map((value, indx) => {
@@ -31,48 +32,47 @@ function App() {
     })
     setBoard(updateCard);
 
-    const finalWinner = whoWin(updateCard);
+      const winner = whoWin(updateCard);
 
-    if (finalWinner === "O")
-     {
-      let { oScore } = scores;
-      oScore = oScore + 1;
-      setScores({ ...scores, oScore })
+   
+      if (winner === "o") {
+        let { oScore } = scores;
+        oScore += 1;
+        setScores({ ...scores, oScore })
+      } else if (winner === 'x') {
+        let { xScore } = scores;
+        xScore += 1;
+        setScores({ ...scores, xScore })
+      
     }
-    else {
 
-      let { xScore } = scores;
-      xScore = xScore + 1;
-      setScores({ ...scores, xScore })
+  setTurn(!turn);
+}
+const whoWin = (board) => {
+
+  for (let i = 0; i <8; i++) {
+    const [x, y, z] = winningCards[i];
+    if (board[x] && board[x] === board[y] && board[y] && board[z]) {
+      console.log(board[x]);
+      setGameOver(true)
+      return board[x];
     }
+  }
+};
+const resetGame = () => {
+  setGameOver(false);
+  setBoard(Array(9).fill(null))
+  setScores({xScore:0,oScore:0})
 
-  
-    setTurn(!turn);
-  };
-  const whoWin = (board) => {
+};
 
-    for (let i = 0; i < winningCards.length; i++) {
-      const [x, y, z] = winningCards[i];
-      if (board[x] && board[x] === board[y] && board[z]) {
-        console.log(board[x]);
-        setGameOver(true)
-        return board[x];
-      }
-    }
-  };
-  const resetGame = () => {
-    setGameOver(false);
-    setBoard(Array(9).fill(null))
-
-  };
-
-  return (
-    <div className="App">
-      <Fscore scores={scores} turn={turn} />
-      <Board board={board} onClick={gameOver ? resetGame : card} />
-      <RestartButton resetGame={resetGame} />
-    </div>
-  );
+return (
+  <div className="App">
+    <Fscore scores={scores} turn={turn} />
+    <Board board={board} onClick={gameOver ? resetGame : card} />
+    <RestartButton resetGame={resetGame} />
+  </div>
+);
 }
 
 export default App;
