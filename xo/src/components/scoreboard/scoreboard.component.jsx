@@ -10,11 +10,11 @@ export const ScoreBoard = ({ scores, xPlaying }) => {
       <div className='wrapper'>
 
         <div className='x-score'>
-            <span  className={`score x-score ${!xPlaying && "inactive"}`}>player 1:: {xScore}</span>
+            <span  className={`score x-score ${!xPlaying && "inactive"}`}>player A:: {xScore}</span>
         </div>
 
         <div className='o-score'>
-            <span className={`score o-score ${xPlaying && "inactive"}`}>player 2 :: {oScore}</span>
+            <span className={`score o-score ${xPlaying && "inactive"}`}>player B :: {oScore}</span>
         </div>
       </div>
     </div>
