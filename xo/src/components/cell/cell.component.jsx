@@ -1,16 +1,10 @@
-import './cell.css';
 
+import "./cell.css";
 
+export const Cell = ({ value, onClick }) => {
+    const style = value === "X" ? "box x" : "box o";
 
-/**
- * 
- * @param {{
- * value: character
- * }} props
- * @returns
- */
-const Cell = (props) =>{
-    const content = (props.value === 'x') ? 'X' : 'O'; 
+    return (
+        <button className={style} onClick={onClick}>{value}</button>
+    )
 }
-
-export default Cell;
