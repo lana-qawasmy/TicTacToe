@@ -1,6 +1,6 @@
 import React from 'react'
-
 import "./scoreboard.css"
+
 
 export const ScoreBoard = ({ scores, xPlaying }) => {
   const { xScore, oScore } = scores;
@@ -10,11 +10,11 @@ export const ScoreBoard = ({ scores, xPlaying }) => {
       <div className='wrapper'>
 
         <div className='x-score'>
-            <span  className={`score x-score ${!xPlaying && "inactive"}`}>X - {xScore}</span>
+            <span  className={`score x-score ${!xPlaying && "inactive"}`}>player 1:: {xScore}</span>
         </div>
-        
+
         <div className='o-score'>
-            <span className={`score o-score ${xPlaying && "inactive"}`}>O - {oScore}</span>
+            <span className={`score o-score ${xPlaying && "inactive"}`}>player 2 :: {oScore}</span>
         </div>
       </div>
     </div>
