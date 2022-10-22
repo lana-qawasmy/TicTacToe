@@ -52,7 +52,7 @@ const whoWin = (board) => {
 
   for (let i = 0; i <winningCards.length; i++) {
     const [x, y, z] = winningCards[i];
-    if (board[x] && board[x] === board[y] && board[y] && board[z]) {
+    if (board[x] && board[x] === board[y] && board[y] ===board[z]) {
       console.log(board[x]);
       setGameOver(true)
       return board[x];
