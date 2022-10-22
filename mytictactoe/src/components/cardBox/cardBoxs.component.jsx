@@ -3,7 +3,7 @@ import "./cardBox.css";
 
 const CardBox = ({ value, onClick }) => {
 
-    const style = value === "X" ? "box x " : " box o";
+    const style = value === "x" ? " box  x " : " box o ";
     return (
         <div>
             <button className={style} onClick={onClick} >

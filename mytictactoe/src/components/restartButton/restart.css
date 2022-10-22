@@ -1,10 +1,15 @@
 .restartButton{
     border: none;
     border-radius: 0.5rem;
-    background-color: blue;
+    background-color: rgb(224, 144, 218);
     color: aliceblue;
     font-size: 2rem;
     padding:10px;
-    margin: 10ox;
-    display: block;
+    margin: 10 px;
+    display:block;
+    cursor: pointer;
+    text-align: center;
+}
+.restartButton:hover{
+    background-color: rgb(137, 70, 182);
 }
