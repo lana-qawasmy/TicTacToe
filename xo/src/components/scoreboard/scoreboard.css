@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Fuzzy+Bubbles:wght@700&family=Lora:ital@1&family=Poppins:wght@200&display=swap');
 
-
+span{
+    width: 90px ;
+}
 .scoreboard{
     display: flex;
     background-image: linear-gradient(40deg, rgba(197, 226, 237, 0.6) 10%, rgba(245, 213, 220, 0.606) 70%);
@@ -8,8 +10,10 @@
     align-items: center;
     min-height: 50px;
     font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 20px;
     width: 97%;
-    border: 1px solid white;
+    height: 5rem;
+    border: 1px solid #E5D1DD;
     border-radius: 10px  10px 0 0 ;
     border-bottom: none;
     margin-left:  auto;
@@ -19,10 +23,26 @@
 
 .wrapper{
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+.x-score, .o-score{
+    padding: 15px 0 12px 0;
 }
 
 .x-score{
-    margin-right: 0.1rem solid white;
+    border: 1px solid white;
+    border-radius: 10px  0 0 10px;
+    border-right: none;
+    padding-left: 10px;
+
+
+}
+
+.o-score{
+    border: 1px solid white;
+    border-radius:  0 10px 10px 0;
+    border-left: none;
+    padding-right: 10px;
 }
