@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.header * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    transition: .3s all;
+    color: white;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #edf6f9;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 10px;
+    height: 100px;
+    width: 300px;
+    margin-bottom: 30px;
+    transition: .3s all;
+}
+
+.header:hover {
+    scale: 1.05;
+}
+
+.header > div {
+    display: flex;
+}
+
+.header > div > p {
+    margin: 0px 10px;
+}
+
+.header p {
+    padding: 5px 13px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.464);
+}
+
+.header p.x {
+    background-color: #ff595e;
+}
+
+.header p.o {
+    background-color: #ffca3a
+}
+
+.header > button {
+    background-color: #78BEC5;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.464);
+}
+
+.header > button:hover {
+    background-color: #6cb1b8;
+}
+
+.header > button:active {
+    background-color: #61a4ab;
+}

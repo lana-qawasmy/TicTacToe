@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.App > div {
+  margin-top: 100px;
+}
