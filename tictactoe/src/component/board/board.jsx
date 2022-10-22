@@ -1,6 +1,7 @@
 import Boxes from "./boxes";
 import { useState } from "react";
-import EndGame from "./EndGame";
+import EndGame from "../endGame/EndGame";
+// import EndGame from "../EndGame";
 
 
 const INITIAL = "";
@@ -117,6 +118,8 @@ const Board = () => {
                 player={X} drow={drow}
                 ClearCounter={ClearCounter}
             />}
+
+        
             <Boxes clickedArray={box} HnadleClick={HnadleClick} />
 
         </div>
