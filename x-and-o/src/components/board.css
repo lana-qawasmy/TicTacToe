@@ -1,0 +1,59 @@
+.board{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    
+
+}
+
+.container{
+    
+        font: 20px "Century Gothic", Futura, sans-serif;
+        margin-left: 35%;
+        margin-top: 12%;
+      
+}
+.reset{
+    margin-top: 10px;
+    margin-left: 22px;
+    
+}
+.status {
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    color: #5d1766;
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /** button styles **/
+  button:hover {
+    cursor: pointer;
+  } 
+
+  .reset {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #c79ad4;
+    border-color: #b685bb;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  
+  .reset:active {
+    color: #fff;
+    background-color: #b400cc;
+    border-color: #af00bf;
+  }
+  
+  .reset:hover {
+    color: #fff;
+    background-color: #ae00d9;
+    border-color: #bb00cc;
+  }
+  
+  .reset:focus {
+    box-shadow: 0 0 0 0.2rem rgba(212, 0, 255, 0.5);
+  }
