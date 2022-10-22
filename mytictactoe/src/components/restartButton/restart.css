@@ -1,0 +1,10 @@
+.restartButton{
+    border: none;
+    border-radius: 0.5rem;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 2rem;
+    padding:10px;
+    margin: 10ox;
+    display: block;
+}
