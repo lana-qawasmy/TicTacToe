@@ -5,7 +5,8 @@ import { Board } from "./components/board/board.component.jsx";
 import './App.css';
 const App = () => {
 
-  const WIN_CONDITIONS = [
+
+  const Win_Conditions = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -53,8 +54,8 @@ const App = () => {
   }
 
   const checkWinner = (board) => {
-    for (let i = 0; i < WIN_CONDITIONS.length; i++) {
-      const [x, y, z] = WIN_CONDITIONS[i];
+    for (let i = 0; i < Win_Conditions.length; i++) {
+      const [x, y, z] = Win_Conditions[i];
 
       // Iterate through win conditions and check if either player satisfies them
       if (board[x] && board[x] === board[y] && board[y] === board[z]) {
@@ -64,6 +65,7 @@ const App = () => {
     }
   }
 
+  
   const resetBoard = () => {
     setGameOver(false);
     setBoard(Array(9).fill(null));
