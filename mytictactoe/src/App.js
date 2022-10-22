@@ -24,7 +24,7 @@ function App() {
   const card = (cardId) => {
     const updateCard = board.map((value, indx) => {
       if (indx === cardId) {
-        return turn === true ? " X " : " O ";
+        return turn === true ? "x" : "o";
       }
       else {
         return value;
@@ -50,7 +50,7 @@ function App() {
 }
 const whoWin = (board) => {
 
-  for (let i = 0; i <8; i++) {
+  for (let i = 0; i <winningCards.length; i++) {
     const [x, y, z] = winningCards[i];
     if (board[x] && board[x] === board[y] && board[y] && board[z]) {
       console.log(board[x]);
