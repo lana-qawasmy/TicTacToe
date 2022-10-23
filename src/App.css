@@ -1,0 +1,18 @@
+
+.App-p {
+  font-size: 50px;
+  color: #e78300;
+  font-weight: bold;
+}
+
+.bar{
+  border: 1px solid green;
+  font-size: 27px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 32vw;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  display: flex;
+  font-weight: 900;
+  padding: 20px;
+}
