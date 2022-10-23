@@ -86,7 +86,6 @@ const Board = () => {
         console.log("handle Click is work ! ");
 
         setBox(
-
             box.map((item, index) => {
                 if (index === props) {
                     if (X) {
