@@ -1,9 +1,9 @@
-// import logo from './logo.svg';
-import './App.css';
-
 // Importing the required components
-import Board from './Board';
-import Info from "./Info";
+import Board from './components/board/board';
+import Info from "./components/info/info";
+
+// Importing the CSS File
+import "./App.css";
 
 // Importing the useState hook
 import { useState } from 'react';
