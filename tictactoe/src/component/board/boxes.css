@@ -10,11 +10,18 @@
     color: purple;
     line-height: 3rem;
     margin: 0.5rem;
+    width:1rem ;
+    height :1rem ;
+    display :flex ;
+    justify-content: center;
+    align-items:center ;
+    box-sizing: border-box;
  
     
 }
 .box:hover{
     box-shadow: 0px 0px 15px  rgb(227, 208, 238);
+    cursor:pointer;
  
 }
 .box.clicked{

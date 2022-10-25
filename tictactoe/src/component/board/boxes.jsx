@@ -23,7 +23,8 @@ const Boxes = ({ clickedArray, HnadleClick }) => {
                         </div>
 
                     );
-                 }})
+                }
+            })
             }
 
         </div>
