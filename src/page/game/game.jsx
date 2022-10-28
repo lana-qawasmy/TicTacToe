@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Board from '../board/board';
 
 const Game = () => {
-    const [turn, setTurn] = useState("x");
+   
     const [nextTurnx, setNextTurnx] = useState(true);
-    const [win, setWin] = useState('');
+  
     const [arr, setArr] = useState([Array(9).fill('')]);
     const [stepNumber, setStepNumber] = useState(0);
     const winner = calculateWinner(arr[stepNumber]);
