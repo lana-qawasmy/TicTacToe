@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import First from './componant/first/first';
+import Start from './page/start/start';
+import Game from './page/game/game';
 
 function App() {
   return (
     <div className="App">
-      <First/>
+       <Game/>
     </div>
   );
 }

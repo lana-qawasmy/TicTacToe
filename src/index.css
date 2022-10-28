@@ -1,13 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: rgb(219, 227, 235);
+  background-color: black;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.squares{
+  background-color: rgb(42, 41, 41);
+  border: 4px solid orangered;
+  font-size: 5rem;
+  cursor: pointer;
+  outline: none;
+}
+.X{
+  
+  color:rgb(45, 98, 183);
+  
+}
+.O{
+color: rgb(236, 123, 54);
+}
+h1{
+  margin:  2rem;
+}
+.board{
+  border:  1rem solid orangered;
+  background: orangered;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  gap: 1rem;
+  grid-template: repeat(3,1fr)/repeat(3,1fr);
+}
+.info{
+  display: flex;
+  justify-content:space-between;
+}
+h3{
+  padding: 1rem;
+}
+li{
+  list-style: none;
+}
+.info button{
+  background: rgb(49, 41, 41);
+  border: none;
+  color:azure;
+  cursor: pointer;
+  outline: none;
+  padding: 0.5 rem;
+  margin: 0.5rem 1rem;
+
 }
