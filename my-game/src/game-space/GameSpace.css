@@ -1,0 +1,40 @@
+.board {
+    /* background-color: #fff; */
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border:2px solid #474646; */
+ } 
+
+ 
+
+.board > .block {
+    background-color: rgb(233, 96, 178);
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    /* border: 1px solid #474646; */
+    border-radius: 10px;
+    color: white;
+    font-size: 130px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 130px;
+    transition-duration: 0.3s;
+  }
+  
+.block:hover {
+    box-shadow: -1px 1px 8px #474646;
+    transition-duration: 200ms;  
+}
+
+.block.X{
+   background-color: rgb(233, 56, 162);
+}
+
+.block.O{
+    background-color: rgb(233, 56, 162);
+ }
+  

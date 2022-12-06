@@ -1,0 +1,10 @@
+.score-row {
+    padding:30px 10px 30px 10px;
+    width: 437px;
+    /* height: 0px; */
+    color: rgb(233, 96, 178);
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+ }

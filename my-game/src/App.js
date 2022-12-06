@@ -1,25 +1,66 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import GameSpace from './game-space/GameSpace';
+import Score from './Score/Score';
+import Result from './Result/Result';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const[blockGame , setBlockGame] = useState(Array(9).fill(""));
+  const [winner, setWinner] = useState('');
+  const[turn , setTurn] = useState('X');
+   const [cntX , setCntX] = useState(0);
+   const [cntO , setCntO] = useState(0);
+
+   const changeTurn = (t) => {
+     setTurn( t === 'X' ? 'O' : 'X')
+   }
+   const ScoreX = (x) => {
+     setCntX(x => {return(x + 1)});
+   }
+
+   const ScoreO = (o) => {
+     setCntO(o => {return(o + 1)});
+   }
+   const onWin = (win) => {
+    changeTurn(win);
+    setWinner(win);
+    console.log("win = " + win);
+    if (win === 'X')
+      setCntX(cntX+1);
+    if (win === 'O')
+      setCntO(cntO+1);
+  }
+    return (
+      <div className="App">
+    <div className="game">
+ {
+   winner === '' &&<Score 
+       turn={turn}
+       X={cntX} O={cntO}
+       />
+ }
+      { winner === '' &&
+       <GameSpace turn={turn} 
+       setTurn={changeTurn}
+        blockGame={blockGame}
+       setBlockGame={setBlockGame} 
+        onWinning={onWin}
+        />
+       }
+    {  
+     winner !== '' &&
+       <Result
+        winner={winner} 
+        blockGame={blockGame} 
+        setBlockGame={setBlockGame}
+        onWin={onWin}
+        />
+
+     }
     </div>
-  );
+
+      </div>
+    );
 }
 
 export default App;
